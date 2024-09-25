@@ -1,0 +1,22 @@
+<h2 mat-dialog-title class="text-secondary">Ajouter une banque</h2>
+<form [formGroup]="bankForm" (ngSubmit)="createBank()" >
+  <div class="d-flex justify-content-center">
+    <mat-form-field appearance="outline" class="col-10">
+      <mat-label>Nom de banque</mat-label>
+      <input matInput formControlName="name" required  minlength="2">
+      <mat-error *ngIf="bankForm.get  ('name')?.hasError('required') ">
+        Le nom est obligatoire.
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+
+  <mat-dialog-actions class="d-flex justify-content-end">
+    <button mat-button class="text-danger" (click)="onNoClick()">Annuler</button>
+    <button mat-button class="text-primary"
+            [disabled]="!bankForm.valid">Ajouter</button>
+  </mat-dialog-actions>
+</form>
+
+
+

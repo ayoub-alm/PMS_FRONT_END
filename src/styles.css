@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-table .mdc-data-table__row{
+  height: 35px;
+}
+
+.mat-mdc-row {
+  background-color: rgba(123, 174, 250, 0.1);
+  height: 10px !important;
+}
+.blue-color{
+  color: rgb(63 81 181) !important;
+}
+
+border-blue{
+  border:1px solid rgb(63 81 181) !important;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  background-color: rgba(123, 174, 250, 0.1);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(63, 81, 181, 0.75); /* Color of the scrollbar thumb */
+  border-radius: 4px;
+  height: 30px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
