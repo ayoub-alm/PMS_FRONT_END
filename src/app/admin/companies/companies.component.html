@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div class="mt-3">
-    <div class="fixed-filter row d-flex justify-content-center">
+    <div class="fixed-section row d-flex justify-content-center sticky bg-white py-3" style="z-index: 500">
       <h1 class="p-0 m-0 align-self-start align-items-center col-4 blue-color">
-        <mat-icon class="">account_balance</mat-icon>
-        <span class="text-secondary"> Banques</span>
+        <mat-icon class="m-0 p-0">account_balance</mat-icon>
+        <span class="ma-text-secondary mx-2 my-0">Entreprises</span>
       </h1>
       <div class="col-4">
         <input #input (keyup)="applyFilter($event)"
@@ -22,30 +22,15 @@
             Exporter
           </button>
         </div>
-        <button class="btn btn-sm btn-outline-secondary  dropdown-toggle d-flex align-items-center gap-1 shadow-sm"
-                [matMenuTriggerFor]="menu"
+        <button [matMenuTriggerFor]="menu"
+                class="btn btn-sm btn-outline-secondary  dropdown-toggle d-flex align-items-center gap-1 shadow-sm"
                 type="button">
           Options
         </button>
-        <!--                  <button mat-raised-button  class="p-0 btn tn btn-sm btn-outline-secondary align-self-center" [matMenuTriggerFor]="menu"  style="transform: scale(0.8)">-->
-        <!--                    <mat-icon class="my-auto blue-color h3 align-self-center">menu</mat-icon>-->
-        <!--                  </button mat-raised-button>-->
       </div>
-
-      <!--      <div class="col-1">-->
-
-      <!--        <button mat-raised-button  class="btn btn-sm" style="transform: scale(0.8)">-->
-      <!--          Ajouter-->
-      <!--        </button>-->
-      <!--      </div>-->
-      <!--      <div class="col-1">-->
-      <!--        <button mat-raised-button  class="p-0 btn align-self-center" [matMenuTriggerFor]="menu"  style="transform: scale(0.8)">-->
-      <!--          <mat-icon class="my-auto blue-color h3 align-self-center">menu</mat-icon>-->
-      <!--        </button>-->
-      <!--      </div>-->
     </div>
   </div>
-  <div class="mat-elevation-z1 mt-2 table-container" tabindex="0">
+  <div class="mat-elevation-z1 mt-2 table-container" style="z-index: 0;" tabindex="0">
     <table [dataSource]="dataSource" class="" mat-table matSort>
 
       <!-- ID Column -->
@@ -63,6 +48,15 @@
         </td>
       </ng-container>
 
+
+      <!-- Image Column -->
+      <ng-container matColumnDef="img">
+        <th *matHeaderCellDef class="blue-color  " mat-header-cell mat-sort-header></th>
+        <td *matCellDef="let row" mat-cell   (click)="showCompany(row)">
+            <img [src]="environment.baseUrl +'/api/images/'+row.logo" alt="logo" class="img-fluid" height="30px" width="40px">
+        </td>
+      </ng-container>
+
       <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th *matHeaderCellDef class="blue-color  " mat-header-cell mat-sort-header> Nom</th>
@@ -71,10 +65,10 @@
 
       <!-- Status Column -->
       <ng-container matColumnDef="status">
-        <th *matHeaderCellDef class="blue-color  " mat-header-cell mat-sort-header> Nom</th>
+        <th *matHeaderCellDef class="blue-color  " mat-header-cell mat-sort-header> Status</th>
         <td *matCellDef="let row" mat-cell>
-          <p [class]="row.active ? 'text-success' :'text-danger'">
-            {{ row.active ? "Active" : "Desactivé" }}
+          <p [class]="row.status === 'ACTIVE' ? 'text-success' :'text-danger'">
+            {{ row.status ? row.status : "N/A" }}
           </p>
         </td>
       </ng-container>
@@ -99,7 +93,9 @@
 
 
       <tr *matHeaderRowDef="displayedColumns; sticky: true;" mat-header-row></tr>
-      <tr *matRowDef="let row; columns: displayedColumns;" class="p-0 m-0 custom-table" mat-row></tr>
+      <tr *matRowDef="let row; columns: displayedColumns;"
+          (click)="showCompany(row)"
+          class="p-0 m-0 custom-table" mat-row></tr>
 
       <!-- Row shown when there is no matching data. -->
       <tr *matNoDataRow class="mat-row">
@@ -110,20 +106,14 @@
     <mat-paginator [pageSizeOptions]="[25, 100]" aria-label="select a page" class="paginator mt-5"></mat-paginator>
 
     <mat-menu #menu="matMenu">
-      <button (click)="openDialog()" mat-menu-item>
-        <mat-icon class="blue-color">add</mat-icon>
-        <span class="blue-color">Ajouter</span>
-      </button>
       <button mat-menu-item>
         <mat-icon class="text-secondary">edit</mat-icon>
         <span class="text-secondary">Edit</span>
       </button>
-      <button (click)="deleteBank()" mat-menu-item>
+      <button (click)="deleteCompany()" mat-menu-item>
         <mat-icon class="text-danger">delete</mat-icon>
         <span class="text-danger">Supprimer</span>
       </button>
-
-
     </mat-menu>
 
 

@@ -38,7 +38,8 @@ export class BankDialogComponent {
   bank!: BankModel;
   bankForm: FormGroup;
   constructor(public dialogRef: MatDialogRef<BankDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: BankModel,
+              @Inject(MAT_DIALOG_DATA)
+              public data: BankModel,
               private bankService: BankService,
               fb: FormBuilder) {
     this.bankForm = fb.group({

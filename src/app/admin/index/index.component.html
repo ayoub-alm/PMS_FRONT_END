@@ -1,0 +1,200 @@
+<header class="navbar sticky-top  flex-md-nowrap p-0 shadow-sm" style="background: rgba(87,87,87,0.59)"
+>
+  <a class="navbar-brand col-md-3 col-lg-2 m-0 px-3 text-center bg-white" href="#">
+    <img alt="Logo" class="img-fluid m-0" src="assets/ma_logo.png" style="height: 20px;">
+  </a>
+  <ul class="navbar-nav flex-row d-md-none">
+
+    <li class="nav-item text-nowrap">
+      <button aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle search"
+              class="nav-link  text-secondary fw-normal px-3 text-white" data-bs-target="#navbarSearch" data-bs-toggle="collapse"
+              type="button">
+        <svg class="bi">
+          <use xlink:href="#search"/>
+        </svg>
+      </button>
+    </li>
+    <li class="nav-item text-nowrap ">
+      <button aria-controls="sidebarMenu" aria-expanded="false"
+              aria-label="Toggle navigation" class="nav-link btn btn-primary  text-secondary fw-normal px-3 text-white" data-bs-target="#sidebarMenu" data-bs-toggle="offcanvas"
+              type="button">
+        <svg class="bi">
+          <use xlink:href="#list"/>
+        </svg>
+      </button>
+    </li>
+  </ul>
+  <div class="navbar-search w-100 collapse text-center " id="navbarSearch">
+    <input aria-label="Search" class="border-0 shadow-sm w-50 rounded-2 form-control-sm border-0 col-lg-6" placeholder="Search"
+           type="text">
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row ">
+    <div class="sidebar border border-right col-md-3  overflow-auto  col-lg-2 p-0 ">
+      <div aria-labelledby="sidebarMenuLabel" class="offcanvas-md offcanvas-end " id="sidebarMenu" tabindex="-1">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="sidebarMenuLabel">
+            <img class="navbar-brand" src="assets/ma_logo.png" width="30px">
+          </h5>
+          <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
+                  type="button"></button>
+        </div>
+        <div class="offcanvas-body d-md-flex flex-column p-0  overflow-y-auto overflow-scroll " style="height: 95vh">
+          <ul class="nav flex-column p-2 ">
+            <li class="nav-item">
+              <a aria-current="page"
+                 class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2  text-primary" href="#">
+                <i class="bi bi-bar-chart-fill"></i>
+                <span class=" text-secondary fw-normal">Tableau de bord</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2"
+                 routerLink="/admin/companies">
+                <i class="bi bi-building"></i>
+                <span class=" text-secondary fw-normal">Entreprises</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2 " href="#">
+                <i class="bi bi-person"></i>
+                <span class=" text-secondary fw-normal fw-normal">Personnels</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-person-fill"></i>
+                <span class=" text-secondary fw-normal">Fourniseurs</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-bank"></i>
+                <span class=" text-secondary fw-normal">   Comptes banncaires </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-cart-check-fill"></i>
+                <span class=" text-secondary fw-normal">Produits & services</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-telephone-fill"></i>
+                <span class=" text-secondary fw-normal">Interaction</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-file-earmark-ruled"></i>
+                <span class=" text-secondary fw-normal">Demandes d'achat</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span class=" text-secondary fw-normal">Demandes de devis</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span class=" text-secondary fw-normal">Devis</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-file-earmark-check-fill"></i>
+                <span class=" text-secondary fw-normal">Commandes</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                <span class=" text-secondary fw-normal">Réceptions</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                <span class=" text-secondary fw-normal">Factures</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-credit-card"></i>
+                <span class=" text-secondary fw-normal">Réglements</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-currency-dollar"></i>
+                <span class=" text-secondary fw-normal">Devises</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span class=" text-secondary fw-normal"> Note de crédit </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-truck"></i>
+                <span class=" text-secondary fw-normal">Livraison</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-sign-turn-slight-left-fill"></i>
+                <span class=" text-secondary fw-normal">Retours</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span class=" text-secondary fw-normal">Reclamations</span>
+              </a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <svg class="bi">
+                  <use xlink:href="#gear-wide-connected"/>
+                </svg>
+                <span class=" text-secondary fw-normal">Settings</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2"
+                 routerLink="/admin/companies">
+                <svg class="bi">
+                  <use xlink:href="#gear-wide-connected"/>
+                </svg>
+                <span class=" text-secondary fw-normal">Entreprises</span>
+              </a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link  text-secondary fw-normal d-flex align-items-center gap-2" href="#">
+                <svg class="bi">
+                  <use xlink:href="#door-closed"/>
+                </svg>
+                <span class=" text-secondary fw-normal">Sign out  </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4  overflow-auto" style="max-height: 90vh;">
+      <router-outlet></router-outlet>
+    </main>
+
+
+  </div>
+</div>

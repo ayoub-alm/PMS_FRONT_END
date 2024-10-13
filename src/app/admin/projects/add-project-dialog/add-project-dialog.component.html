@@ -1,0 +1,17 @@
+<h2 mat-dialog-title class="ma-color">Ajouter un projet</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="projectForm" class="my-2 p-1">
+    <mat-form-field appearance="outline" class="w-100 ">
+      <mat-label>Nom de projet</mat-label>
+      <input matInput formControlName="projectName" cdkFocusInitial  autofocus placeholder="Projet Exemple" required>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close
+          class="btn text-danger">Annuler</button>
+  <button mat-button [disabled]="!projectForm.invalid"
+          class="ma-color"
+          (click)="createProject()"
+           cdkFocusInitial>Ajouter</button>
+</mat-dialog-actions>

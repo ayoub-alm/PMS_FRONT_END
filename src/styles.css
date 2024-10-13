@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -12,19 +11,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   height: 10px !important;
 }
 .blue-color{
-  color: rgb(63 81 181) !important;
+  color:#803C3B  !important;
 }
 
 border-blue{
-  border:1px solid rgb(63 81 181) !important;
+  border:1px solid #803C3B  !important;
 }
 
 .mat-mdc-row:hover .mat-mdc-cell {
-  background-color: rgba(123, 174, 250, 0.1);
+  background-color: rgba(87, 87, 87, 0.1) !important;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(63, 81, 181, 0.75); /* Color of the scrollbar thumb */
+  background-color: #803C3B ; /* Color of the scrollbar thumb */
   border-radius: 4px;
   height: 30px;
 }
@@ -36,4 +35,59 @@ border-blue{
 *::-webkit-scrollbar {
   height: 4px;
   width: 4px;
+}
+
+
+.ma-color{
+  color: #803C3B !important;
+}
+
+.ma-bk-color{
+  background-color:#803C3B  !important;
+}
+
+
+.ma-text-secondary {
+  color: #575757 !important; /* Replace with your desired color */
+}
+
+.ma-bg-secondary {
+  background-color: #575757 !important; /* Replace with your desired color */
+}
+
+.ma-border-secondary {
+  border-color: #575757 !important; /* Replace with your desired color */
+}
+::ng-deep .mat-step-header .mat-step-icon-selected {
+  background-color: #803C3B  !important;
+  color: white !important;
+}
+::ng-deep .mat-step-header  {
+  background-color: #803C3B  !important;
+  color: white !important;
+}
+
+.mat-step-icon-selected{
+  background-color: #803C3B  !important;
+}
+.mat-step-icon-selected {
+  color: #803C3B  !important;
+}
+
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: #803C3B !important;
+  padding: 0%;
+}
+
+.mat-mdc-tab.mdc-tab--active  {
+  background-color: rgba(128, 60, 59, 0.2) !important;
+  border-radius: 10px 10px 0px 0px ;
+}
+
+.mat-mdc-tab.mdc-tab--active .mat-mdc-tab-indicator{
+  background-color: #803C3B !important;
+}
+ .mat-mdc-tab-indicator-active-indicator-color{
+  color: #803C3B !important;
 }

@@ -1,0 +1,266 @@
+<p class="h6 p-3 shadow-sm mt-2 rounded-3">
+  <a class="ma-color" routerLink="/admin/companies">Entreprises</a> / détails
+</p>
+
+<div class="container-fluid tab-container shadow-sm mt-2 rounded-3">
+  <mat-tab-group class="p-4" mat-stretch-tabs="false" mat-align-tabs="start">
+    <mat-tab label="Détails de l'entreprise" >
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon mx-2">business</mat-icon>
+        Détails de l'entreprise
+      </ng-template>
+      <div class="row mt-3 p-3">
+        <div class="col-lg-2">
+          <p class="text-center">
+            <img [src]="environment.baseUrl + '/api/images/' + company.getValue().logo" alt="Logo"
+                 class="img-fluid border border-2 border-secondary rounded-2 shadow">
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Nom de l'entreprise :
+            </span>
+            <span class="mx-2">{{ company.getValue().name }}</span>
+          </p>
+          <hr>
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Sigle :
+            </span>
+            <span class="mx-2 my-3">{{ company.getValue().sigle }}</span>
+          </p>
+          <hr>
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Capital :
+            </span>
+            <span class="mx-2 my-3">{{ company.getValue().capital }} MAD</span>
+          </p>
+          <hr>
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Siège social :
+            </span>
+            <span class="mx-2 my-3">{{ company.getValue().headOffice }}</span>
+          </p>
+          <hr>
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Année de création :
+            </span>
+            <span class="mx-2 my-3">{{ company.getValue().yearOfCreation }}</span>
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Taille de l'entreprise :
+            </span>
+            <span class="mx-2 my-3">{{ company.getValue().companySize.name }}</span>
+          </p>
+          <hr>
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Ville :
+            </span>
+            <span class="mx-2 my-3">{{ company.getValue().city.name }}</span>
+          </p>
+          <hr>
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Pays :
+            </span>
+            <span class="mx-2 my-3">{{ company.getValue().country.name }}</span>
+          </p>
+          <hr>
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Industrie :
+            </span>
+            <span class="mx-2 my-3">{{ company.getValue().industry.name }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-12">
+          <hr>
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Description de l'activité :
+            </span>
+            <span class="mx-2 my-3">{{ company.getValue().businessDescription }}</span>
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Informations légales">
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon mx-2">gavel</mat-icon>
+        Informations légales
+      </ng-template>
+      <div class="row mt-3 p-4">
+        <div class="col-lg-6">
+          <p><span class="ma-color"><i class="bi bi-caret-right-fill"></i> Certificat :</span>
+            <span class="mx-2 ">{{ company.getValue().certificationText }}</span></p>
+          <hr>
+          <p><span class="ma-color"><i class="bi bi-caret-right-fill"></i> Représentant légal :</span>
+            <span class="mx-2 my-3">{{ company.getValue().legalRepresentative }}</span></p>
+          <hr>
+          <p><span class="ma-color"><i class="bi bi-caret-right-fill"></i> Titre du représentant légal :</span>
+            <span class="mx-2 my-3">{{ company.getValue().legalRepresentative }}</span></p>
+        </div>
+        <div class="col-lg-6">
+          <p><span class="ma-color"><i class="bi bi-caret-right-fill"></i> ICE :</span>
+            <span class="mx-2 my-3">{{ company.getValue().ice }}</span></p>
+          <hr>
+          <p><span class="ma-color"><i class="bi bi-caret-right-fill"></i> RC :</span>
+            <span class="mx-2 my-3">{{ company.getValue().rc }}</span></p>
+          <hr>
+          <p><span class="ma-color"><i class="bi bi-caret-right-fill"></i> IFM :</span>
+            <span class="mx-2 my-3">{{ company.getValue().ifm }}</span></p>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Informations de contact">
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon mx-2">contacts</mat-icon>
+        Informations de contact
+      </ng-template>
+
+      <div class="row mt-3 p-4">
+        <div class="col-lg-6">
+          <p>
+            <span class="ma-color"><i class="bi bi-caret-right-fill"></i> Email :</span>
+            <span class="mx-2">{{ company.getValue().email }}</span>
+          </p>
+          <hr>
+          <p>
+            <span class="ma-color"><i class="bi bi-caret-right-fill"></i> Téléphone :</span>
+            <span class="mx-2">{{ company.getValue().phone }}</span>
+          </p>
+          <hr>
+          <p>
+            <span class="ma-color"><i class="bi bi-caret-right-fill"></i> Fax :</span>
+            <span class="mx-2">{{ company.getValue().fax }}</span>
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <p>
+            <span class="ma-color"><i class="bi bi-caret-right-fill"></i> WhatsApp :</span>
+            <span class="mx-2">{{ company.getValue().whatsapp }}</span>
+          </p>
+          <hr>
+          <p>
+            <span class="ma-color"><i class="bi bi-caret-right-fill"></i> Site Web :</span>
+            <span class="mx-2">{{ company.getValue().website }}</span>
+          </p>
+          <hr>
+          <p>
+            <span class="ma-color"><i class="bi bi-caret-right-fill"></i> LinkedIn :</span>
+            <span class="mx-2">{{ company.getValue().linkedin }}</span>
+          </p>
+        </div>
+      </div>
+    </mat-tab>
+
+
+    <mat-tab label="Projets">
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon mx-2">work_outline</mat-icon>
+        Projets & départements
+      </ng-template>
+      <div class="row p-5 ">
+          <div class="col-6">
+            <mat-accordion class="example-headers-align p-3" multi>
+              <div class="d-flex justify-content-between">
+                <p class="ma-color"><i class="bi bi-caret-right-fill"></i> Projets :</p>
+                <p>
+                  <button (click)="showAddNewProjectDialog()" mat-button class="btn ma-color btn-sm">
+                    <mat-icon class="" >add</mat-icon> Nouveaux
+                  </button>
+                </p>
+              </div>
+              <mat-expansion-panel *ngFor="let project of companyProjects | async">
+                <mat-expansion-panel-header>
+                  <mat-panel-title> {{project.name}} </mat-panel-title>
+                </mat-expansion-panel-header>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+        <div class="col-6">
+          <mat-accordion class="example-headers-align mt-3 p-3" multi>
+            <div class="d-flex justify-content-between">
+            <p class="ma-color"><i class="bi bi-caret-right-fill"></i> Départements :</p>
+            <p>
+              <button (click)="showAddNewProjectDialog()" mat-button class="btn ma-color btn-sm">
+                <mat-icon class="" >add</mat-icon> Nouveaux
+              </button>
+            </p>
+            </div>
+            <mat-expansion-panel >
+              <mat-expansion-panel-header>
+                <mat-panel-title> Département 1</mat-panel-title>
+              </mat-expansion-panel-header>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel >
+                <mat-expansion-panel-header>
+                  <mat-panel-title> Département 2</mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel >
+              <mat-expansion-panel-header>
+                <mat-panel-title> Département 3</mat-panel-title>
+              </mat-expansion-panel-header>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Paramètre">
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon mx-2">settings</mat-icon>
+        Paramètre
+      </ng-template>
+      <div class="row mt-3 p-4">
+        <div class="col-12">
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Status :
+            </span>
+            <span class="mx-2 my-3">
+              <div class="form-check mt-3">
+                <input class="form-check-input" checked type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Active
+                </label>
+              </div>
+            </span>
+          </p>
+
+          <p>
+            <span class="ma-color">
+              <i class="bi bi-caret-right-fill"></i> Manager :
+            </span>
+            <span class="mx-2 my-3">
+              <div class="form-check mt-3">
+               Ayoub lemrachchaq
+              </div>
+            </span>
+          </p>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<br>
+<br>
+<br>
+<br>

@@ -18,7 +18,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {DatePipe} from "@angular/common";
 import {MatCheckbox} from "@angular/material/checkbox";
 import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
-import {MatIconButton, MatMiniFabButton} from "@angular/material/button";
+import {MatButton, MatIconButton, MatMiniFabButton} from "@angular/material/button";
 import {MatDialog} from "@angular/material/dialog";
 import {BankDialogComponent} from "./bank-dialog/bank-dialog.component";
 import {catchError, of, Subscription, tap} from "rxjs";
@@ -32,7 +32,7 @@ import {MatChip} from "@angular/material/chips";
   standalone: true,
   imports: [MatFormFieldModule, HttpClientModule, MatInputModule, MatTable, MatPaginator, MatColumnDef, MatHeaderCell,
     MatCell, MatCellDef, MatRowDef, MatHeaderRow, MatRow, MatHeaderCellDef, MatHeaderRowDef, MatNoDataRow, MatSort,
-    DatePipe, MatCheckbox, MatSortHeader, MatIcon, MatMenuTrigger, MatMenu, MatMenuItem, MatIconButton, MatMiniFabButton, MatChip],
+    DatePipe, MatCheckbox, MatSortHeader, MatIcon, MatMenuTrigger, MatMenu, MatMenuItem, MatIconButton, MatMiniFabButton, MatChip, MatButton],
   templateUrl: './bank.component.html',
   styleUrls: ['./bank.component.css'],
   providers: [BankService],

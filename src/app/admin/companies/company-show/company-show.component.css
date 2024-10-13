@@ -1,0 +1,22 @@
+.tab-container{
+  overflow: hidden;
+
+}
+*{
+  overflow: hidden;
+}
+
+.mdc-tab.mdc-tab--active{
+  color: #803C3B !important;
+}
+
+
+.custom-active-tab {
+  color: #803C3B !important;
+}
+.mat-tab-label-active {
+  color: #803C3B !important;
+}
+
+
+

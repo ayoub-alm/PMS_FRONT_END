@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable, tap} from "rxjs";
 import {BankModel} from "../../models/bank.model";
 
@@ -31,7 +31,7 @@ export class BankService {
    * @param bank
    */
   createBank(bank: BankModel): Observable<BankModel> {
-    return this.http.post<BankModel>(`${this.baseUrl}/banks`, bank).pipe(
+    return this.http.post<BankModel>(`${this.baseUrl}/banks`, bank, ).pipe(
       tap(bank => {
          new BankModel(bank.id,bank.createdAt,bank.updatedAt,bank.createdBy,bank.name,bank.active,bank.deletedAt)
       })
